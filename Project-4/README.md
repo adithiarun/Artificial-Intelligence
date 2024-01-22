@@ -15,7 +15,7 @@ The decide function is used to get either the left child or the right child node
 
 ## Build Decision Tree
 In this function, the following decision tree is created:  
-                             $~~~$a4  
+                              $~~$ a4  
                              $~~$ /\\  
                             $~~$ a3  a2  
                                 $~~~$  \\  
