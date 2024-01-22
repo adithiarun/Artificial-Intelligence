@@ -18,8 +18,8 @@ In this function, the following decision tree is created:
 &nbsp; &nbsp; a4  
 &nbsp; &nbsp; /\\  
 &nbsp; a3 a2  
-&nbsp; &nbsp; &nbsp; \\  
-&nbsp; &nbsp; &nbsp; a1  
+&nbsp; &nbsp; &nbsp; &nbsp; \\  
+&nbsp; &nbsp; &nbsp; &nbsp; a1  
 
 ## Performance Metrics
 
