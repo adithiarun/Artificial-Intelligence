@@ -17,3 +17,5 @@ This is an unsupervised learning algorithm which groups datapoints based on thei
 In this project, k means clustering is used to segment a color image.
 
 ### Multivariate Gaussian Mixture Model
+
+A Gaussian Mixture Model is a probabilistic model that represents data as a mixture of multiple gaussian distribution. Each gaussian distribution represents a cluster in the data. The number of clusters is predetermined. The gaussian mixture model tries to optimize three parameters--mu, sigma, and pi--to best fit our data. Mu is the mean of the normal distribution. Sigma is a measure of how spread out the distribution is. A high sigma means that it is very spread out. Pi tells us the probability of a datapoint fitting into each of the clusters. 
