@@ -14,7 +14,7 @@ Left points to values where the decision function returns a true, while right po
 The decide function is used to get either the left child or the right child node based on the return value of the decision function.
 
 ## Build Decision Tree
-In this function, the following decision tree is created:
+In this function, the following decision tree is created:  
                               a4  
                               /\\  
                             a3  a2  
