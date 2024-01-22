@@ -1,6 +1,6 @@
 ## Expectation Maximization
 
-For this project, K Means Clustering, Gaussian Mixture Models, and a metric called Bayesian Information Criterion are implemented.
+For this project, K Means Clustering, Gaussian Mixture Models, and a metric called Bayesian Information Criterion are implemented. Read ahead to learn about these algorithms and the criterion.
 
 ### K-means Clustering
 This is an unsupervised learning algorithm which groups datapoints based on their similarity to each other.
@@ -24,4 +24,16 @@ P(X | pi, mu, sigma) = prod[(i=1 to N), sum((k=1 to K), pi_k * N(x_i | mu_k, sig
 
 where i is the index of the datapoints, k is the index of the clusters, and N(x_i | mu_k, sigma_k) is the normal distribution of that cluster.  
 We maximize this probability by taking its derivative, equating it to zero, and solving for mu_k, sigma_k, and pi_k.
+
+At this step, two auxilliary variables are defined: z_ik and gamma_z_ik.  
+
+z_ik is an indicator variable equal to 1 if x_i is in class k and 0 otherwise.  
+
+z_ik = pi_k * N(x_i | mu_k, sigma_k) = P(z_k) * P(x_i | z_ik = 1)
+
+gamma_z_ik = P(z_ik = 1 | x_i)
+
+gamma_z_ik is the probability a given observation x_i is in class k. This is obtained using Bayes' Theorem.
+
+Upon taking derivatives, we are left with the following formulas for mu_k, sigma_k, and pi_k.
 
