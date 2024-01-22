@@ -14,7 +14,7 @@ Left points to values where the decision function returns a true, while right po
 The decide function is used to get either the left child or the right child node based on the return value of the decision function.
 
 ## Build Decision Tree
-In this function, the following decision tree is created:  
+In this function, the below decision tree is created. The features used for splitting are a1, a2, a3, and a4.   
 &nbsp; &nbsp; a4  
 &nbsp; &nbsp; /\\  
 &nbsp; a3 a2  
