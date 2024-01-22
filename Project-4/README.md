@@ -2,7 +2,7 @@
 
 Decision Trees are a type of Supervised Machine Learning Model. In supervised learning, we feed a sample input and output, and the model learns a function that maps the input to the output. We then test the model against a test dataset that is different from the training set. A hypothesis generalizes well if it correctly predicts the y value. Decision trees take a vector of attribute values as input and return a decision. 
 
-In this project we code a Decision Node Class (representing a single node in the decision tree), a Decision Tree Class (which 
+In this project, I coded a Decision Node Class (representing a single node in the decision tree), a Decision Tree Class (which automatically builds the decision tree), and a Random Forest Class (which builds several trees). Additionally, I implemented the metrics to evaluate the performances of the classifiers.
 
 ## DecisionNode Class
 
@@ -13,10 +13,17 @@ Left points to values where the decision function returns a true, while right po
 ### Decide Function
 The decide function is used to get either the left child or the right child node based on the return value of the decision function.
 
-### Build Decision Tree
-Helper function that builds the decision tree and returns the root node.
+## Build Decision Tree
+In this function, the following decision tree is created:
+                              a4
+                              /\
+                            a3  a2 
+                                  \
+                                   a1
 
-### Confusion Matrix
+## Performance Metrics
+
+#### Confusion Matrix
 This function returns the confusion matrix as a list of lists ([[true positive, false negative], [false positive, true negative]]). The confusion matrix gives us a measure of the model's performance. 
 
 True Positive: Number of outcomes where the model correctly predicts the positive class
@@ -26,8 +33,6 @@ False Negative: Number of outcomes where the model incorrectly predicts the nega
 True Negative: Number of outcomes where the model correctly predicts the negative class
 
 False Positive: Number of outcomes where the model incorrectly predicts the positive class
-
-### Other Performance Metrics
 
 #### Precision = True Positive / (True Positive + False Positive)
 Precision gives us a measure of what portion of outcomes were correctly identified as being positive divided by the number of correctly identified positives plus the incorrectly identified positives.
@@ -47,3 +52,7 @@ Gini Impurity gives us the probability of incorrectly classifying a point in the
 Information gain is the criterion used to determine whether a particular feature should be used to split a decision tree or not.
 
 ## DecisionTree Class
+
+The decision tree class recursively builds the tree by choosing the best features to split on at each level by calculating the gini gains of all the features and choosing the one with the highest gain for the split.
+
+The classify function uses the previously built tree to classify features.
