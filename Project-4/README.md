@@ -17,7 +17,7 @@ The decide function is used to get either the left child or the right child node
 In this function, the following decision tree is created:  
 &nbsp; &nbsp; a4  
 &nbsp; &nbsp; /\\  
-&nbsp; a3 a2  
+&nbsp; &nbsp; a3 a2  
 &nbsp; &nbsp; \\  
 &nbsp; &nbsp; &nbsp; a1  
 
