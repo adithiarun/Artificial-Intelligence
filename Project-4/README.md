@@ -59,4 +59,4 @@ The classify function uses the previously built tree to classify features.
 
 ## Random Forest Class
 
-
+The random forest classifier creates several decision trees. It combines the outputs of the decision trees to produce a single result. A technique called Bootstrap Aggregation or Bagging, where we take random samples with replacement of the original dataset and use them to train the decision trees. Bagging prevents overfitting.
