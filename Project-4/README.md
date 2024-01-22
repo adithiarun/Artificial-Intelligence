@@ -56,3 +56,7 @@ Information gain is the criterion used to determine whether a particular feature
 The decision tree class recursively builds the tree by choosing the best features to split on at each level by calculating the gini gains of all the features and choosing the one with the highest gain for the split.
 
 The classify function uses the previously built tree to classify features.
+
+## Random Forest Class
+
+
