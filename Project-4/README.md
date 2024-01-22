@@ -9,7 +9,7 @@ This class represents a single node in the decision tree. It is initialized with
 Left points to values where the decision function returns a true, while right points to values where the decision function returns a false.
 
 ### Decide Function
-The decide function is used to get a child node based on the decision function.
+The decide function is used to get either the left child or the right child node based on the return value of the decision function.
 
 ### Build Decision Tree
 Helper function that builds the decision tree and returns the root node.
@@ -26,3 +26,16 @@ True Negative: Number of outcomes where the model correctly predicts the negativ
 False Positive: Number of outcomes where the model incorrectly predicts the positive class
 
 ### Other Performance Metrics
+
+#### Precision = True Positive / (True Positive + False Positive)
+Precision gives us a measure of what portion of outcomes were correctly identified as being positive divided by the number of correctly identified positives plus the incorrectly identified positives.
+
+#### Recall = True Positive / (True Positive + False Negative)
+Recall is the number of outcomes that were correctly identified as being positive divided by the total number of actual positives.
+
+#### Accuracy = (True Positive + True Negative) / (True Positive + False Positive + True Negative + False Negative)
+Accuracy is the total number of correct predictions divided by the total number of predictions
+
+There can be instances where the precision and recall are low but accuracy is high. Hence, it is important to pay attention to precision and recall, so that we take false positives and false negatives into account.
+
+#### Gini Impurity 
