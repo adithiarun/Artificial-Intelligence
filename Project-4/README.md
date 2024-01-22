@@ -1,6 +1,8 @@
-## Build, Train, and Test Decision Tree Models
+# Build, Train, and Test Decision Tree Models
 
 Decision Trees are a type of Supervised Machine Learning Model. In supervised learning, we feed a sample input and output, and the model learns a function that maps the input to the output. We then test the model against a test dataset that is different from the training set. A hypothesis generalizes well if it correctly predicts the y value. Decision trees take a vector of attribute values as input and return a decision. 
+
+In this project we code a Decision Node Class (representing a single node in the decision tree), a Decision Tree Class (which 
 
 ## DecisionNode Class
 
@@ -39,3 +41,9 @@ Accuracy is the total number of correct predictions divided by the total number 
 There can be instances where the precision and recall are low but accuracy is high. Hence, it is important to pay attention to precision and recall, so that we take false positives and false negatives into account.
 
 #### Gini Impurity 
+Gini Impurity gives us the probability of incorrectly classifying a point in the dataset. The purer the decision tree split (i.e. the fewer the misclassifications) the lower the Gini Impurity.
+
+#### Gini Gain or Information Gain
+Information gain is the criterion used to determine whether a particular feature should be used to split a decision tree or not.
+
+## DecisionTree Class
