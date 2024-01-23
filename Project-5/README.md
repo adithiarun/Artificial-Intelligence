@@ -35,5 +35,26 @@ gamma_z_ik = P(z_ik = 1 | x_i)
 
 gamma_z_ik is the probability a given observation x_i is in class k. This is obtained using Bayes' Theorem.
 
-Upon taking derivatives, we are left with the following formulas for mu_k, sigma_k, and pi_k.
+Upon taking derivatives, we are left with the following formulas for mu_k, sigma_k, and pi_k.  
 
+u_k = (1/N_k) sum((i = 1 to N), gamma_z_ik*x_i)  
+
+sigma_k = (1/N_k) sum((i = 1 to N), gamma_z_ik*(x_i - mu_k)*(x_i - mu_k).T)  
+
+pi_k = N_k / N, where N_k = sum((i=1 to N), gamma_z_ik)
+
+There is a circular dependence in these formulas.  
+
+mu_k, sigma_k, and pi_k depend on gamma, and gamma depends on mu_k, sigma_k, and pi_k.
+
+In order to solve for these variables, we use the expectation maximization algorithm.
+
+#### Expectation Maximization Algorithm
+
+1. Initialize mu_k, sigma_k, and pi_k
+2. compute gamma_z_ik's for all datapoints
+3. recompute mu_k, sigma_k, and pi_k until convergence
+
+### Bayesian Information Criterion
+
+This criterion is used to prevent overfitting. It penalizes models based on the number of parameters they use. In the case of the Gaussian Mixture Model, the number of criterions per cluster (which are mu_k, sigma_k, and pi_k) times the number of clusters.
