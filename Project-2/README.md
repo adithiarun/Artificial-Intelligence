@@ -20,4 +20,6 @@ The Open Move Evaluation function outputs a score equal to how many moves are op
 ### Minimax Algorithm
 
 Minimax is a backtracking algorithm that is used to find the most optimal move for an agent assuming that the opponent is also playing optimally. The algorithm creates a tree recursively of two players: a maximizer and a minimizer. The maximizer generates all possible moves for your agent, when it is your turn. It tries to get your agent the highest evaluation function possible. The minimizer, on the other hand, generates the hypothetical moves that the opponent will take. The minimizer step assumes that the opponent will make the move that hurt your agent the most, and hence, picks the move that minimizes the evaluation function the most. 
-The algorithm runs the maximizer and minimizer upto a certain depth, and then returns the best possible move for the maximizer. The tree below shows how the algorithm picks a move.
+The algorithm runs the maximizer and minimizer upto a certain depth, and then returns the best possible move for the maximizer. The tree below shows how the algorithm picks a move.  
+
+![MinimaxTree](img/image001.png)
