@@ -7,7 +7,7 @@ At the beginning of the game, the first player places both the pieces on any two
 horizontally, or diagonally). When the piece is moved, the square that was previously occupied is blocked. That square can not be used for the remainder of the game. The piece can not move through blocked squares.
 The first player who is unable to move any one of the queens loses.
 
-The goal is to implement the following parts of the AI in the class CustomPlayer:
+The goal is to implement the following parts of the agent in the class CustomPlayer:
 
 1. Evaluation functions (OpenMoveEvalFn() and CustomEvalFn())
 2. The minimax algorithm (minimax())
@@ -15,9 +15,9 @@ The goal is to implement the following parts of the AI in the class CustomPlayer
 
 ### Open Move Eval Function
 
-Evaluation function that outputs a score equal to how many moves are open for my AI player on the board minus how many moves are open for the opponent's player on the board.
+The Open Move Evaluation function outputs a score equal to how many moves are open for my AI player minus how many moves are open for the opponent's player on the board. The evaluation function determines a score for every board state in the tree formed by the minimax algorithm.
 
 ### Minimax Algorithm
 
-Minimax is a backtracking algorithm that is used to find the most optimal move for an agent assuming that the opponent is also playing optimally. There are two players: a maximizer and a minimizer. The maximizer tries to get the highest score possible, while the minimizer tries to get the lowest score possible. 
-The algorithm alternatively maps out the minimizer's steps followed by the maximizer's steps upto a certain depth, and then 
+Minimax is a backtracking algorithm that is used to find the most optimal move for an agent assuming that the opponent is also playing optimally. The algorithm creates a tree recursively of two players: a maximizer and a minimizer. The maximizer generates all possible moves for your agent, when it is your turn. It tries to get your agent the highest evaluation function possible. The minimizer, on the other hand, generates the hypothetical moves that the opponent will take. The minimizer step assumes that the opponent will make the move that hurt your agent the most, and hence, picks the move that minimizes the evaluation function the most. 
+The algorithm runs the maximizer and minimizer upto a certain depth, and then returns the best possible move for the maximizer. The tree below shows how the algorithm picks a move.
