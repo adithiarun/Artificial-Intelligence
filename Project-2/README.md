@@ -23,3 +23,10 @@ Minimax is a backtracking algorithm that is used to find the most optimal move f
 The algorithm runs the maximizer and minimizer upto a certain depth, and then returns the best possible move for the maximizer. The tree below shows how the algorithm picks a move.  
 
 ![MinimaxTree](img/image001.png)
+
+
+The white circles indicate that it is the maximizer's turn and the black circles indicate that it is the minimizer's turn.
+
+### Alpha Beta Pruning  
+
+This is a modification to the minimax algorithm where we prune branches with evaluation function values that are irrelevant. This allows us to search upto a deeper level.
